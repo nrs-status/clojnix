@@ -54,18 +54,3 @@
        :fifo-path fifo-path
        :write (write-of proc)
        :chan read-loop})))
-;
-; (require '[clj-stdlib.fp :refer [enum]]
-;          '[clj-stdlib.parser :refer [start]]
-;          '[clojnix-compiler.reader :refer [parse]]
-;          '[clojnix-compiler.builtins :refer [builtins]])
-; (def target (enum "{:a 7}"))
-; (compile builtins (first (start parse target)))
-; (def target (enum (slurp "/home/sieyes/baghdad_plane/flakes/lennon-injalt/zeus-olympia/audio/fortest.clj")))
-; (def parsing (first (start parse target)))
-; (def compilation (compile builtins parsing))
-
-; (def api (mk-repl-api "/tmp/somefile.txt"))
-; (def write (:write api))
-; (write "{a = 7; }")
-; (write compilation)
